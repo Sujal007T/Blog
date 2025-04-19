@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optimize Multithreading C Overview</title>
+    <title>Optimize Multithreading  in C </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Optimize Multithreading C Overview</h1>
+        <h1>Optimize <span>Multithreading in C</span> Overview</h1>
         <p class="intro">A fundamental component of contemporary computing, multithreading allows programs to run multiple tasks at once and optimize CPU utilization. Learning C multithreading is crucial for developers and students of computer engineering, particularly as systems become more intricate. This blog explores C multithreading optimization, emphasizing useful methods, problems, and fixes. Because technical depth is given priority by search engines, this guide provides both novices and experts with useful insights.</p>
     </header>
 
     <section class="content">
-        <h2>Why The Significance of Multithreading</h2>
+        <h2>The Significance of Multithreading</h2>
         <p>A program can manage several tasks at once by using multithreading, such as processing data and taking user input. The POSIX Threads (pthreads) library in C is an effective tool for this. Performance bottlenecks, deadlocks, and race conditions can result from poor implementation, though. Optimizing multithreading guarantees effective resource utilization and a vital ability for real-world software development since optimizing multithreading guarantees effective use of resources and strong applications.</p>
 
         <h3>Thread Management and Creation</h3>
@@ -23,7 +23,8 @@
         <p>Semaphores avoid race conditions whereby several threads access shared data concurrently. We have previously covered the Sleeping Barber Problem, which shows this with a barber and patrons seated in chairs. Sem_init and sem_wait let a basic C implementation manage access:</p>
         <details>
             <summary>Click to View Code: Sleeping Barber Example</summary>
-            <pre><code>
+            <div class="code-block">
+                <pre><code>
 #include <pthread.h>
 #include <semaphore.h>
 #include <stdio.h>
@@ -64,9 +65,11 @@ int main() {
     pthread_join(b, NULL);
     return 0;
 }
-            </code></pre>
+                </code></pre>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+            </div>
+            <p>This guarantees just one thread changes the shared resource at a time, so preventing data corruption.</p>
         </details>
-        <p>This guarantees just one thread changes the shared resource at a time, so preventing data corruption.</p>
 
         <h3>Loadbalancing</h3>
         <p>Even distribution of work among threads helps some from idling while others are overloaded to be avoided. Set up a task queue whereby threads pick jobs as they finish others. On multi-core systems, this dynamic allocation adjusts to different task sizes, so increasing throughput.</p>
@@ -87,5 +90,18 @@ int main() {
         <h2>Conclusion</h2>
         <p>By addressing concurrency issues with workable solutions, optimizing multithreading in C allows for the full potential of contemporary hardware. Gaining proficiency in these areas distinguishes you whether you're working on academic assignments or business applications. Start with simple multithreaded programs to gain experience, then work your way up to more complicated synchronization issues. Parallel computing is the way of the future, so master C multithreading now to get ahead.</p>
     </section>
+
+    <script>
+        function copyCode() {
+            const code = document.querySelector('.code-block pre code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                const button = document.querySelector('.copy-btn');
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = 'Copy Code';
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>
