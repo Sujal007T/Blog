@@ -35,11 +35,6 @@ header::before {
     opacity: 0.5;
 }
 
-header > * {
-    position: relative;
-    z-index: 1;
-}
-
 h1 {
     color: #ffffff;
     font-size: 2em;
@@ -47,10 +42,6 @@ h1 {
     text-transform: uppercase;
     padding: 10px;
     border-radius: 6px;
-}
-
-h1 span {
-    color: #ffffff;
 }
 
 .intro {
@@ -142,32 +133,28 @@ code {
     font-size: 0.9em;
 }
 
-.code-container {
+.code-block {
     position: relative;
 }
 
-.copy-btn {
+.code-block .copy-btn {
     position: absolute;
     top: 10px;
     right: 10px;
-    background: rgba(29, 205, 159, 0.2);
-    color: #1dcd9f;
-    border: 1px solid #1dcd9f;
-    padding: 5px 10px;
+    background: rgba(15, 77, 67, 0.7);
+    color: #ffffff;
+    border: none;
+    padding: 4px 8px;
     border-radius: 4px;
     cursor: pointer;
     font-size: 0.8em;
-    transition: background 0.3s ease, opacity 0.3s ease;
-    opacity: 0.7;
+    transition: background 0.3s ease;
+    opacity: 0.8;
 }
 
-.copy-btn:hover {
-    background: rgba(29, 205, 159, 0.4);
-    opacity: 0.9;
-}
-
-.copy-btn:active {
-    background: rgba(29, 205, 159, 0.6);
+.code-block .copy-btn:hover {
+    background: rgba(29, 205, 159, 0.9);
+    opacity: 1;
 }
 
 @media (max-width: 768px) {
@@ -225,9 +212,11 @@ code {
         padding: 1px 3px;
     }
 
-    .copy-btn {
+    .code-block .copy-btn {
+        top: 8px;
+        right: 8px;
+        padding: 3px 6px;
         font-size: 0.7em;
-        padding: 4px 8px;
     }
 }
 
@@ -280,116 +269,10 @@ code {
         font-size: 0.7em;
     }
 
-    .copy-btn {
-        font-size: 0.6em;
-        padding: 3px 6px;
-    }
-}
-
-.code-block {
-    position: relative;
-}
-
-.code-block pre {
-    background: #333333;
-    padding: 12px;
-    border-left: 3px solid #0f4d43;
-    overflow-x: auto;
-    border-radius: 4px;
-    margin: 10px 0;
-    font-size: 0.9em;
-}
-
-.code-block code {
-    color: #1dcd9f;
-    background: #222222;
-    padding: 2px 4px;
-    border-radius: 3px;
-    font-size: 0.9em;
-}
-
-.code-block .copy-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(15, 77, 67, 0.7);
-    color: #ffffff;
-    border: none;
-    padding: 4px 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.8em;
-    transition: background 0.3s ease;
-    opacity: 0.8;
-}
-
-.code-block .copy-btn:hover {
-    background: rgba(29, 205, 159, 0.9);
-    opacity: 1;
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 40px 15px;
-        width: 95%;
-    }
-
-    header .header-content {
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 1.8em;
-        padding: 8px;
-        border: 1px solid #1dcd9f;
-    }
-
-    .intro {
-        font-size: 1em;
-        padding: 10px;
-        margin: 10px auto;
-    }
-
-    .content {
-        padding: 15px 15px;
-        width: 95%;
-        margin-top: -15px;
-    }
-
-    h2 {
-        font-size: 1.2em;
-        padding: 6px;
-    }
-
-    h3 {
-        font-size: 1em;
-        margin-top: 10px;
-    }
-
-    h3::before {
-        width: 6px;
-        height: 6px;
-        left: -12px;
-    }
-
-    details summary {
-        font-size: 0.9em;
-    }
-
-    .code-block pre {
-        padding: 10px;
-        font-size: 0.8em;
-    }
-
-    .code-block code {
-        font-size: 0.8em;
-        padding: 1px 3px;
-    }
-
     .code-block .copy-btn {
-        top: 8px;
-        right: 8px;
-        padding: 3px 6px;
-        font-size: 0.7em;
+        top: 6px;
+        right: 6px;
+        padding: 2px 5px;
+        font-size: 0.6em;
     }
 }
