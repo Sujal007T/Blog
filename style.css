@@ -12,13 +12,14 @@ body {
 
 header {
     background: linear-gradient(45deg, #169976, #1dcd9f 80%, #222222 100%);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(29, 205, 159, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(29, 205, 159, 0.7);
     text-align: center;
     position: relative;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin: 10px auto;
+    width: 90%;
 }
 
 header::before {
@@ -50,7 +51,7 @@ header > * {
 
 h1 {
     color: #ffffff;
-    font-size: 3em;
+    font-size: 2em;
     margin: 0;
     text-transform: uppercase;
     background: linear-gradient(90deg, #169976, #1dcd9f, #ffffff);
@@ -58,62 +59,62 @@ h1 {
     background-clip: text;
     color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
+    padding: 10px;
     border: 2px solid #1dcd9f;
     display: inline-block;
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
 .intro {
     color: #ffffff;
-    font-size: 1.3em;
-    max-width: 900px;
-    margin: 20px auto;
+    font-size: 1.1em;
+    max-width: 90%;
+    margin: 15px auto;
     background: rgba(22, 153, 118, 0.3);
-    padding: 20px;
-    border-left: 6px solid #1dcd9f;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(29, 205, 159, 0.5);
+    padding: 15px;
+    border-left: 4px solid #1dcd9f;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(29, 205, 159, 0.5);
     font-weight: 600;
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 .content {
-    max-width: 900px;
+    max-width: 90%;
     margin: 0 auto;
-    padding: 20px 30px;
+    padding: 15px 20px;
     flex: 1 0 auto;
     background: #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(29, 205, 159, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(29, 205, 159, 0.2);
 }
 
 h2 {
     color: #ffffff;
-    font-size: 2em;
+    font-size: 1.5em;
     border-bottom: 2px solid #169976;
     padding-bottom: 5px;
     background: linear-gradient(to right, #1a1a1a, #1dcd9f);
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 20px;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 15px;
 }
 
 h3 {
     color: #1dcd9f;
-    font-size: 1.5em;
-    margin-top: 20px;
+    font-size: 1.2em;
+    margin-top: 15px;
     position: relative;
 }
 
 h3::before {
     content: '';
     position: absolute;
-    left: -20px;
+    left: -15px;
     top: 50%;
     transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background: #169976;
     border-radius: 50%;
 }
@@ -121,7 +122,7 @@ h3::before {
 details summary {
     cursor: pointer;
     color: #1dcd9f;
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 5px 0;
 }
 
@@ -136,16 +137,125 @@ p {
 
 pre {
     background: #333333;
-    padding: 15px;
-    border-left: 4px solid #169976;
+    padding: 12px;
+    border-left: 3px solid #169976;
     overflow-x: auto;
-    border-radius: 5px;
+    border-radius: 4px;
     margin: 10px 0;
+    font-size: 0.9em;
 }
 
 code {
     color: #1dcd9f;
     background: #222222;
-    padding: 2px 5px;
+    padding: 2px 4px;
     border-radius: 3px;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        width: 95%;
+        margin: 5px auto;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        padding: 8px;
+        border-radius: 4px;
+    }
+
+    .intro {
+        font-size: 1em;
+        padding: 10px;
+        border-left-width: 3px;
+        margin: 10px auto;
+    }
+
+    .content {
+        padding: 10px 15px;
+        width: 95%;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        padding: 6px;
+        margin-top: 10px;
+    }
+
+    h3 {
+        font-size: 1em;
+        margin-top: 10px;
+    }
+
+    h3::before {
+        width: 6px;
+        height: 6px;
+        left: -12px;
+    }
+
+    details summary {
+        font-size: 0.9em;
+    }
+
+    pre {
+        padding: 10px;
+        font-size: 0.8em;
+    }
+
+    code {
+        font-size: 0.8em;
+        padding: 1px 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+        width: 98%;
+    }
+
+    h1 {
+        font-size: 1.2em;
+        padding: 6px;
+    }
+
+    .intro {
+        font-size: 0.9em;
+        padding: 8px;
+        margin: 8px auto;
+    }
+
+    .content {
+        padding: 8px 10px;
+        width: 98%;
+    }
+
+    h2 {
+        font-size: 1em;
+        padding: 4px;
+    }
+
+    h3 {
+        font-size: 0.9em;
+    }
+
+    h3::before {
+        width: 5px;
+        height: 5px;
+    }
+
+    details summary {
+        font-size: 0.8em;
+    }
+
+    pre {
+        padding: 8px;
+        font-size: 0.7em;
+    }
+
+    code {
+        font-size: 0.7em;
+    }
 }
