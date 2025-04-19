@@ -118,6 +118,17 @@ h3::before {
     border-radius: 50%;
 }
 
+details summary {
+    cursor: pointer;
+    color: #1dcd9f;
+    font-size: 1.2em;
+    padding: 5px 0;
+}
+
+details[open] summary {
+    color: #ffffff;
+}
+
 p {
     color: #d3d3d3;
     margin: 10px 0;
@@ -129,6 +140,7 @@ pre {
     border-left: 4px solid #169976;
     overflow-x: auto;
     border-radius: 5px;
+    margin: 10px 0;
 }
 
 code {
